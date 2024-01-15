@@ -1,0 +1,166 @@
+<!--
+ * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @Date: 2024-01-12 22:10:21
+ * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @LastEditTime: 2024-01-15 23:05:19
+ * @FilePath: \009\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>小刘同学</title>
+    <meta name="language" content="zh-CN">
+    <meta name="title" content="小刘同学">
+    <meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .city {
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            z-index: 100;
+        }
+        
+        .city img {
+            width: 100%;
+        }
+        
+        audio {
+            opacity: 0;
+        }
+        /* 文本内容 */
+        
+        .content {
+            margin: 30px auto;
+        }
+        
+        .hide .labi-1-bottom {
+            display: none;
+        }
+        
+        .labi-1-bottom {
+            display: block;
+            position: fixed;
+            bottom: 10vh;
+            right: -100px;
+            z-index: 9999;
+        }
+        
+        .btn-groups {
+            display: flex;
+            align-items: center;
+        }
+        
+        .no-btn {
+            display: inline-flex;
+            align-items: center;
+            width: 200px;
+            height: 80px;
+            background-color: #ffffff;
+            border-radius: 4px;
+        }
+        
+        .labi-cry {
+            width: 120px;
+            z-index: 9999;
+        }
+        
+        .labi-cry1 {
+            width: 60px;
+        }
+        
+        .labi-happy {
+            width: 60px;
+        }
+    </style>
+    <title>
+        放烟花
+    </title>
+    <link href="modal.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function toggleSound() {
+            var music = document.getElementById("music"); //获取ID  
+            music.play(); //没有就播放 
+            // if (music.paused) { //判读是否播放  
+            //     music.paused = false;
+            //     music.play(); //没有就播放 
+            // }
+        }
+    </script>
+
+</head>
+
+<body onselectstart="return false">
+    <!--对话部分-->
+    <div class="share_img"><img src="a8b.png" alt=""></div>
+
+    <div class="page_one">
+        <div class="content">
+            <div class="text_wrapper">
+                <!-- <img src="a8.png" alt=""> -->
+                <div class="text">
+                    <p>
+                        刘娟，我们在一起吧！你愿意做我女朋友吗？
+                    </p>
+                </div>
+            </div>
+            <div class="btn-groups">
+                <!-- <div class="heart-btn"> -->
+                <div id="yes" class="no-btn">
+                    <img src="labi-happy.png" alt="" class="labi-happy"> 愿意
+                </div>
+                <!-- </div> -->
+                <div id="no" class="no-btn">
+                    <img src="labi-cry.png" alt="" class="labi-cry"> 不愿意
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--烟花部分-->
+    <canvas id='cas' style="background-color:rgba(0,5,24,1)">
+        浏览器不支持canvas
+    </canvas>
+    <img src="labi1.gif" alt="" class="labi-1-bottom hide">
+    <div class="city">
+        <img src="city.png" alt="" />
+    </div>
+    <img src="moon.png" alt="" id="moon" style="visibility: hidden;" />
+    <div style="display:none">
+        <div class="shape">
+            马陈鹏❤︎刘娟
+        </div>
+        <div class="shape">
+            I LOVE YOU
+        </div>
+        <!-- <div class="shape">
+            爱你呦ღ( ´･ᴗ･` )
+        </div>
+        <div class="shape">
+            永远开心哦
+        </div> -->
+
+    </div>
+    <!--音乐部分-->
+    <audio loop id="music">
+        <source src="music.mp3" />
+    </audio>
+    <audio id="music_no">
+        <source src="no.mp3" />
+    </audio>
+    <iframe id="iframMusic" allow="autoplay" style="display:none" src="blank.mp3"></iframe>
+    <script src="jquery.min.js"></script>
+    <script src="fire.js"></script>
+    <script src="talk.js"></script>
+</body>
+
+</html>

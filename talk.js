@@ -2,23 +2,25 @@
  * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
  * @Date: 2024-01-12 22:10:21
  * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
- * @LastEditTime: 2024-01-15 23:03:21
+ * @LastEditTime: 2024-01-16 22:37:53
  * @FilePath: \009\talk.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 $(function () {
   $("#yes").click(function (event) {
-    toggleSound();
+    // toggleSound();
+    playLabiSound("music_yes");
     modal("好耶。(^_^)", function () {
       $(".page_one").addClass("hide");
       $(".page_two").removeClass("hide");
       $(".labi-1-bottom").removeClass("hide");
       // typeWrite();
+      toggleSound();
       fireworks();
     });
   });
   $("#no").click(function (event) {
-    playNoSound();
+    playLabiSound();
     modal(
       `<img src='labi-cry1.png' class='labi-cry1' >` + "请 请你想想办法，拜托了"
     );
@@ -37,8 +39,8 @@ function toggleSound() {
 }
 
 //拒绝语音
-function playNoSound() {
-  var music = document.getElementById("music_no"); //获取ID
+function playLabiSound(id = "music_no") {
+  var music = document.getElementById(id); //获取ID
   // music.autoplay = true;
   music.play(); //没有就播放
   // if (music.paused) { //判读是否播放

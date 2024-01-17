@@ -260,7 +260,7 @@ function putValue(canvas, context, ele, dr, callback) {
     var text = ele.innerHTML;
     context.save();
     // var fontSize = 200;
-    var fontSize = 120;
+    var fontSize = 90;
     context.font = fontSize + "px 宋体 bold";
     context.textAlign = "center";
     context.textBaseline = "middle";

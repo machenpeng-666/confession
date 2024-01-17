@@ -35,7 +35,6 @@ function animate() {
     var random = Math.random() * 100 > 33 ? true : false;
     var x = getRandom(canvas.width / 5, (canvas.width * 4) / 5);
     var y = getRandom(50, 200);
-    console.log(random, "random");
     if (random) {
       var bigboom = new Boom(
         getRandom(canvas.width / 3, (canvas.width * 2) / 3),
@@ -63,7 +62,6 @@ function animate() {
       bigbooms.push(bigboom);
     }
     lastTime = newTime;
-    console.log(bigbooms);
   }
   stars.foreach(function () {
     this.paint();
@@ -258,9 +256,10 @@ function putValue(canvas, context, ele, dr, callback) {
     });
   } else {
     var text = ele.innerHTML;
+    console.log(text, "text", text.length, "text.length");
     context.save();
     // var fontSize = 200;
-    var fontSize = 90;
+    var fontSize = text.length > 8 ? 90 : 120;
     context.font = fontSize + "px 宋体 bold";
     context.textAlign = "center";
     context.textBaseline = "middle";
